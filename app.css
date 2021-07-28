@@ -1,0 +1,225 @@
+/*
+
+### Primary
+
+- Blue: hsl(223, 87%, 63%)
+
+### Secondary
+
+- Pale Blue: hsl(223, 100%, 88%)
+- Light Red: hsl(354, 100%, 66%)
+
+### Neutral
+
+- Gray: hsl(0, 0%, 59%)
+- Very Dark Blue: hsl(209, 33%, 12%)
+
+font-family: 'Libre Franklin', sans-serif;300, 600, 700
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.25rem ; /*20px  */
+    box-sizing: border-box;
+    padding: 1rem;
+    display: grid;
+    place-content: center;
+    max-width: 100%;
+    min-height: 100%;
+    font-family: 'Libre Franklin', sans-serif;
+    color: hsl(209, 33%, 12%);
+}
+li {
+    list-style: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+.container{
+    display: grid;
+    place-content: center;
+    grid-row-gap: 5rem;
+    row-gap: 5rem;
+}
+
+
+.header {
+    padding: 15% 5% 0 5%;
+    display: grid;
+    grid-template-rows: repeat(4, minmax(min-content,max-content));
+    grid-row-gap: 1.5rem;
+    row-gap: 1.5rem;
+    text-align: center;
+}
+
+.header__logo {
+    justify-self: center;
+    width: 4.5rem;   
+}
+.header__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.header__title span {
+    font-weight: 300;
+    color: hsl(0, 0%, 59%);
+}
+.header__text {
+    font-size: 1rem;
+}
+
+.form {
+    display: grid;
+}
+
+.email {
+    width: 100%;
+    padding: 1rem 2rem;
+    border: 1px solid hsl(223, 100%, 88%);
+    border-radius: 3.5rem;
+    margin-top: 1rem;
+    outline: none;
+}
+.email::placeholder {
+    color: hsl(223, 100%, 88%);
+}
+
+.error-msg {
+    font-size: 0.8rem;
+    color:  hsl(354, 100%, 66%);
+    font-weight: 600;
+    margin-top: 0.3rem;
+}
+.hidden {
+    display: none;
+}
+
+.btn--notify {
+    background-color: hsl(223, 87%, 63%);
+    border: none;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 3.5rem;
+    box-shadow: 0 1rem 1rem rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 1.5rem;
+}
+.btn--notify:hover {
+    opacity: 0.7;
+    transform: translateY(-0.1rem);
+}
+
+.main__img {
+    max-width: 100%;
+}
+
+.footer {
+    display: grid;
+    place-content: center;
+    grid-row-gap: 1.5rem;
+    row-gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.footer__icons {
+    display: flex;
+    justify-content: center;
+}
+.footer__icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.5px solid hsl(223, 87%, 63%);
+    border-radius: 50%;
+    margin-left: 1rem;
+    color: hsl(223, 87%, 63%);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.facebook {
+    margin-left: 0;
+}
+.footer__icons a:hover {
+    background-color: hsl(223, 87%, 63%);
+    color: #fff;
+    transform: translateY(-0.1rem);
+}
+.footer__copyright {
+    color: hsl(0, 0%, 59%);
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+@media screen and (min-width: 50em) {
+    .container {
+        max-width: 60%;
+        justify-self: center;
+        align-self: center;
+        row-gap: 3rem;
+    }
+    .header {
+        padding-top: 10%;
+    }
+    .header__logo {
+        width: 6rem;
+    }
+    .header__title {
+        font-size: 3rem;
+        padding-top: 1rem;
+    }
+    .header__text {
+        font-size: 1.25rem;
+    }
+    .form {
+        margin-top: 1rem;
+        grid-template-rows: repeat(2, minmax(min-content,max-content));
+        grid-template-columns: 60% 35%;
+        grid-column-gap: 1rem;
+        column-gap: 1rem;
+    }
+    .email {
+        grid-row: 1/2;
+        margin: 0;
+        grid-column: 1/2 ;
+    }
+    .error-msg {
+        grid-row: 2/-1;
+        grid-column: 1/2;
+    }
+    .btn--notify {
+        grid-row: 1/2;
+        grid-column: 2/-1;
+        padding: 1rem;
+        margin: 0;
+    }
+    .error-msg {
+        justify-self: start;
+        margin-left: 2rem;
+    }
+    .footer {
+        margin-top: 1rem;
+    }
+}
+
+
+
